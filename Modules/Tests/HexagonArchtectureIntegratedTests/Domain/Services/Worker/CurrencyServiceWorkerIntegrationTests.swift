@@ -63,4 +63,34 @@ class CurrencyServiceWorkerIntegrationTests: XCTestCase {
 
         wait(for: [expectation], timeout: 10.0)
     }
+    
+    // =============================================================================
+    // Remove this test after endpoint first element error beeen fixed
+    // It's a test for a WorkAround(Gambiarra) 😅
+    func testWorkArountEvent() {
+        sut = EventsServiceWorker(service: RequestServiceAdapter())
+
+        let expectation = XCTestExpectation()
+
+        sut.getEvent(id: "1") { result in
+
+            switch result {
+            case .success(let event):
+                XCTAssertEqual(event.people?.count ?? 100, 5)
+                XCTAssertEqual(event.longitude ?? 0.0, -51.2146267)
+                XCTAssertEqual(event.latitude ?? 0.0, -30.0392981)
+                XCTAssertEqual(event.id ?? "", "1")
+                XCTAssertEqual(event.price ?? 0.0, 29.99)
+
+            case .failure:
+                XCTFail("Unexpected error. It shout be success")
+            }
+
+            expectation.fulfill()
+
+        }
+
+        wait(for: [expectation], timeout: 10.0)
+    }
+    // =============================================================================
 }

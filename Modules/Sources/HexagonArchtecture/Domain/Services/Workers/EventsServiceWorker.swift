@@ -8,7 +8,7 @@ class EventsServiceWorker: EventsService {
         self.requestService = service
     }
 
-    func getAllEvents(completion: @escaping DecodedCompletion<[Model.Event]>) {
+    func getAllEvents(completion: @escaping DecodedCompletion<[InputModel.Event]>) {
         let urlPath = Config.baseURL + "/events"
         let request = ServiceRequest(url: urlPath,
                                      method: .get,
@@ -16,12 +16,12 @@ class EventsServiceWorker: EventsService {
                                      headers: [:],
                                      timeout: 30.0)
         
-        requestService.request([Model.Event].self, from: request, additionalHeaders: [:]) { result in
+        requestService.request([InputModel.Event].self, from: request, additionalHeaders: [:]) { result in
             completion(result)
         }
     }
     
-    func getEvent(id: String, completion: @escaping DecodedCompletion<Model.Event>) {
+    func getEvent(id: String, completion: @escaping DecodedCompletion<InputModel.Event>) {
         let urlPath = Config.baseURL + "events/\(id)"
         let request = ServiceRequest(url: urlPath,
                                      method: .get,
@@ -29,7 +29,7 @@ class EventsServiceWorker: EventsService {
                                      headers: [:],
                                      timeout: 30.0)
         
-        requestService.request(Model.Event.self, from: request, additionalHeaders: [:]) { result in
+        requestService.request(InputModel.Event.self, from: request, additionalHeaders: [:]) { result in
             completion(result)
         }
     }

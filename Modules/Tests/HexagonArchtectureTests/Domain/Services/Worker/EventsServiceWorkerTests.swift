@@ -104,19 +104,19 @@ class CurrencyServiceWorkerTests: XCTestCase {
 
 }
 
-func checkEvent(_ model: Model.Event) {
+func checkEvent(_ model: InputModel.Event) {
     XCTAssertEqual(model.people?.count ?? 0, 1)
     XCTAssertTrue(model.date == 12345)
     XCTAssertTrue(model.description == "description")
     XCTAssertTrue(model.image == "event.png")
-    XCTAssertTrue(model.longitude == "-1.1")
-    XCTAssertTrue(model.latitude == "-2.2")
+    XCTAssertTrue(model.longitude == -1.1)
+    XCTAssertTrue(model.latitude == -2.2)
     XCTAssertTrue(model.price == 12.34)
     XCTAssertTrue(model.title == "Event Test")
     XCTAssertTrue(model.id == "1")
 }
 
-func checkPerson(_ model: Model.Event.Person) {
+func checkPerson(_ model: InputModel.Event.Person) {
     XCTAssertTrue(model.picture == "person.png")
     XCTAssertTrue(model.name == "Person1")
     XCTAssertTrue(model.eventId == "1")

@@ -17,7 +17,8 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "git@github.com:dedeexe/DDXNetwork.git", .exact("1.0.0")),
-        .package(name: "SnapshotTesting", url: "https://github.com/pointfreeco/swift-snapshot-testing.git", from: "1.8.1")
+        .package(name: "SnapshotTesting", url: "https://github.com/pointfreeco/swift-snapshot-testing.git", from: "1.8.1"),
+        .package(name: "Introspect", url: "https://github.com/siteline/SwiftUI-Introspect.git", from: "0.1.0")
     ],
     targets: [
 
