@@ -9,9 +9,35 @@
 import SwiftUI
 
 struct EventsView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    @ObservedObject var viewModel: EventsViewModel
+    
+    init(viewModel: EventsViewModel = EventsViewModel()) {
+        self.viewModel = viewModel
     }
+    
+    var body: some View {
+        VStack(alignment: .center) {
+            viewModel.state.data.flatMap {
+                createEventList(events: $0)
+            }
+        }.onAppear {
+            self.viewModel.getEvents()
+        }
+    }
+    
+    func createEventList(events: [Event]) -> some View {
+        List {
+            ForEach(events, id: \.id) { event in
+                Text(event.title)
+            }
+        }
+    }
+    
+//    func createErrorView(error: Error) -> some View {
+//        List {
+//            
+//        }
+//    }
 }
 
 struct EventsView_Previews: PreviewProvider {

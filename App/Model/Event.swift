@@ -1,9 +1,18 @@
-//
-//  Event.swift
-//  EventsApp
-//
-//  Created by User on 9/27/20.
-//  Copyright © 2020 User. All rights reserved.
-//
+public struct Event: Decodable, Identifiable {
+    public var id: String
+    public var people: [Person]
+    public var date: String
+    public var description: String
+    public var image: String
+    public var longitude: Double
+    public var latitude: Double
+    public var price: Float
+    public var title: String
+}
 
-import Foundation
+public struct Person: Decodable {
+    public var picture: String
+    public var name: String
+    public var eventId: String
+    public var id: String
+}
