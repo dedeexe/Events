@@ -1,6 +1,7 @@
 import Foundation
 
 enum DataState<Data> {
+    case idle
     case loading
     case loaded(Data)
     case error(Error)

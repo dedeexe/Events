@@ -3,7 +3,7 @@ import Foundation
 import HexagonEdges
 import HexagonArchtecture
 
-protocol EventsAdapter {
+protocol EventsAdapter: AnyObject {
     func allEvents() -> AnyPublisher<[Event], Error>
     func events(by id: String)
 }
