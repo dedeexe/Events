@@ -1,17 +1,17 @@
 import SwiftUI
 import Combine
 
-final class EventsViewModel: ObservableObject {
-
-    enum State {
+final class EventsViewModel: ObservableObject, Identifiable {
+    enum State: Error {
         case idle
         case loading
-        case loaded([Event])
+        case loaded([EventCardViewModel])
         case error(Error)
     }
 
+    private(set) var id = UUID().uuidString
     private let adapter: EventsAdapter
-    @Published var state: DataState<[Event]> = .idle
+    @Published var state: DataState<[EventCardViewModel]> = .idle
     
     var cancellables: Set<AnyCancellable> = []
     
@@ -23,20 +23,14 @@ final class EventsViewModel: ObservableObject {
         state = .loading
         adapter.allEvents()
             .receive(on: DispatchQueue.main)
-            .sink(
-                receiveCompletion: { completion in
-                    switch completion {
-                    case .failure(let error):
-                        self.state = .error(error)
-                    case .finished:
-                        return
-                    }
-                },
-                receiveValue: { events in
-                    self.state = .loaded(events)
-                }
-            )
+            .map { $0.map(EventCardViewModel.init) }
+            .map { DataState.loaded($0) }
+            .catch { error in
+                Just(error)
+                    .map(DataState.error)
+                    .eraseToAnyPublisher()
+            }
+            .assign(to: \.state, on: self)
             .store(in: &cancellables)
     }
 }
-

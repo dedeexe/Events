@@ -43,12 +43,12 @@ private extension Event {
     init(from model: InputModel.Event) {
         self.id = model.id ?? UUID().uuidString
         self.people = model.people?.compactMap(Person.init) ?? []
-        self.date = String(model.date ?? 0)
+        self.date = (model.date ?? 0).timestampDate
         self.description = model.description ?? ""
         self.image = model.image ?? ""
         self.longitude = model.longitude ?? 0.0
         self.latitude = model.latitude ?? 0.0
-        self.price = model.price ?? 0.0
+        self.price = (model.price ?? 0.0).currency
         self.title = model.title ?? ""
     }
 }

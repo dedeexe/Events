@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B594D622522A83200694E60 /* EventCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B594D612522A83100694E60 /* EventCardView.swift */; };
+		0B594D652522B5D300694E60 /* Double+Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B594D642522B5D300694E60 /* Double+Currency.swift */; };
+		0B594D672522C52100694E60 /* Int+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B594D662522C52100694E60 /* Int+Date.swift */; };
+		0B95A72325240CEF0080ACCF /* ImageDownloadAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B95A72225240CEF0080ACCF /* ImageDownloadAdapter.swift */; };
+		0B95A726252416B60080ACCF /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B95A725252416B60080ACCF /* PhotoView.swift */; };
+		0B95A728252417830080ACCF /* DownloadPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B95A727252417830080ACCF /* DownloadPhotoView.swift */; };
+		0B95A72C25248E690080ACCF /* EventCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B95A72B25248E690080ACCF /* EventCardViewModel.swift */; };
 		0BED4FA525200A3900E2525D /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BED4FA425200A3900E2525D /* EventsView.swift */; };
 		0BED4FA72520241400E2525D /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BED4FA62520241400E2525D /* EventsViewModel.swift */; };
 		0BED4FAA252024F200E2525D /* DataState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BED4FA9252024F200E2525D /* DataState.swift */; };
@@ -22,6 +29,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B594D612522A83100694E60 /* EventCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCardView.swift; sourceTree = "<group>"; };
+		0B594D642522B5D300694E60 /* Double+Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Currency.swift"; sourceTree = "<group>"; };
+		0B594D662522C52100694E60 /* Int+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Date.swift"; sourceTree = "<group>"; };
+		0B95A72225240CEF0080ACCF /* ImageDownloadAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloadAdapter.swift; sourceTree = "<group>"; };
+		0B95A725252416B60080ACCF /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
+		0B95A727252417830080ACCF /* DownloadPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadPhotoView.swift; sourceTree = "<group>"; };
+		0B95A72B25248E690080ACCF /* EventCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCardViewModel.swift; sourceTree = "<group>"; };
 		0BED4FA425200A3900E2525D /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
 		0BED4FA62520241400E2525D /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
 		0BED4FA9252024F200E2525D /* DataState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataState.swift; sourceTree = "<group>"; };
@@ -49,6 +63,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B594D602522A80400694E60 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				0B594D612522A83100694E60 /* EventCardView.swift */,
+				0B95A72B25248E690080ACCF /* EventCardViewModel.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		0B594D632522B5BA00694E60 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0B594D662522C52100694E60 /* Int+Date.swift */,
+				0B594D642522B5D300694E60 /* Double+Currency.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0B95A72425240F970080ACCF /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				0B95A725252416B60080ACCF /* PhotoView.swift */,
+				0B95A727252417830080ACCF /* DownloadPhotoView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		0BED4FA225200A1200E2525D /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +101,7 @@
 		0BED4FA325200A1E00E2525D /* Events */ = {
 			isa = PBXGroup;
 			children = (
+				0B594D602522A80400694E60 /* Components */,
 				0BED4FA425200A3900E2525D /* EventsView.swift */,
 				0BED4FA62520241400E2525D /* EventsViewModel.swift */,
 			);
@@ -85,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				0BED4FB12520A8A600E2525D /* EventsAdapter.swift */,
+				0B95A72225240CEF0080ACCF /* ImageDownloadAdapter.swift */,
 			);
 			path = Adapters;
 			sourceTree = "<group>";
@@ -117,9 +160,11 @@
 		0BF1339D251FD87300842E8B /* App */ = {
 			isa = PBXGroup;
 			children = (
-				0BED4FB32520A8E700E2525D /* Model */,
 				0BED4FB02520A86500E2525D /* Adapters */,
+				0B95A72425240F970080ACCF /* Components */,
 				0BED4FA8252024CF00E2525D /* Data */,
+				0B594D632522B5BA00694E60 /* Extensions */,
+				0BED4FB32520A8E700E2525D /* Model */,
 				0BED4FA225200A1200E2525D /* Scenes */,
 				0BF1339E251FD87300842E8B /* AppDelegate.swift */,
 				0BF133A0251FD87300842E8B /* SceneDelegate.swift */,
@@ -214,12 +259,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B594D672522C52100694E60 /* Int+Date.swift in Sources */,
+				0B95A726252416B60080ACCF /* PhotoView.swift in Sources */,
 				0BED4FB52520A9C000E2525D /* Event.swift in Sources */,
 				0BED4FA72520241400E2525D /* EventsViewModel.swift in Sources */,
 				0BF1339F251FD87300842E8B /* AppDelegate.swift in Sources */,
+				0B95A728252417830080ACCF /* DownloadPhotoView.swift in Sources */,
+				0B594D622522A83200694E60 /* EventCardView.swift in Sources */,
 				0BF133A1251FD87300842E8B /* SceneDelegate.swift in Sources */,
+				0B594D652522B5D300694E60 /* Double+Currency.swift in Sources */,
 				0BED4FB22520A8A600E2525D /* EventsAdapter.swift in Sources */,
+				0B95A72C25248E690080ACCF /* EventCardViewModel.swift in Sources */,
 				0BED4FAA252024F200E2525D /* DataState.swift in Sources */,
+				0B95A72325240CEF0080ACCF /* ImageDownloadAdapter.swift in Sources */,
 				0BF133A3251FD87300842E8B /* AppMainView.swift in Sources */,
 				0BED4FA525200A3900E2525D /* EventsView.swift in Sources */,
 			);

@@ -1,11 +1,3 @@
-//
-//  EventsView.swift
-//  EventsApp
-//
-//  Created by User on 9/26/20.
-//  Copyright © 2020 User. All rights reserved.
-//
-
 import SwiftUI
 
 struct EventsView: View {
@@ -20,24 +12,26 @@ struct EventsView: View {
             viewModel.state.data.flatMap {
                 createEventList(events: $0)
             }
+            
+            viewModel.state.errorMessage.flatMap {
+                createErrorView(error: $0)
+            }
         }.onAppear {
             self.viewModel.getEvents()
         }
     }
     
-    func createEventList(events: [Event]) -> some View {
+    func createEventList(events: [EventCardViewModel]) -> some View {
         List {
-            ForEach(events, id: \.id) { event in
-                Text(event.title)
+            ForEach(events, id: \.id) { eventViewModel in
+                EventCardView(viewModel: eventViewModel)
             }
         }
     }
     
-//    func createErrorView(error: Error) -> some View {
-//        List {
-//            
-//        }
-//    }
+    func createErrorView(error: String) -> some View {
+        Text(error)
+    }
 }
 
 struct EventsView_Previews: PreviewProvider {

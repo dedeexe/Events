@@ -6,7 +6,7 @@ public struct Event: Decodable, Identifiable {
     public var image: String
     public var longitude: Double
     public var latitude: Double
-    public var price: Float
+    public var price: String
     public var title: String
 }
 

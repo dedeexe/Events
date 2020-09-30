@@ -9,7 +9,7 @@ extension InputModel {
         public var image: String?
         public var longitude: Double?
         public var latitude: Double?
-        public var price: Float?
+        public var price: Double?
         public var title: String?
 
         //============================================
@@ -35,7 +35,7 @@ extension InputModel {
             self.date = try? container?.decodeIfPresent(Int.self, forKey: .date)
             self.description = try? container?.decodeIfPresent(String.self, forKey: .description)
             self.image = try? container?.decodeIfPresent(String.self, forKey: .image)
-            self.price = try? container?.decodeIfPresent(Float.self, forKey: .price)
+            self.price = try? container?.decodeIfPresent(Double.self, forKey: .price)
             self.title = try? container?.decodeIfPresent(String.self, forKey: .title)
             
             if let value = try? container?.decodeIfPresent(String.self, forKey: .longitude) {
