@@ -2,13 +2,6 @@ import SwiftUI
 import Combine
 
 final class EventsViewModel: ObservableObject, Identifiable {
-    enum State: Error {
-        case idle
-        case loading
-        case loaded([EventCardViewModel])
-        case error(Error)
-    }
-
     private(set) var id = UUID().uuidString
     private let adapter: EventsAdapter
     @Published var state: DataState<[EventCardViewModel]> = .idle

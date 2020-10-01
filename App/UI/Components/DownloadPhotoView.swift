@@ -2,11 +2,7 @@ import SwiftUI
 import Combine
 
 final class DownloadPhotoViewModel: ObservableObject {
-    @Published var image: Image {
-        didSet {
-            print("Foi")
-        }
-    }
+    @Published var image: Image 
     
     private let url: String
     private let fallbackImage: Image
@@ -31,19 +27,43 @@ final class DownloadPhotoViewModel: ObservableObject {
 
 struct DownloadPhotoView: View {
     @ObservedObject var viewModel: DownloadPhotoViewModel
+    private let loadOnAppear: Bool
+    
+    init(viewModel: DownloadPhotoViewModel, loadOnAppear: Bool = true) {
+        self.viewModel = viewModel
+        self.loadOnAppear = loadOnAppear
+    }
     
     var body: some View {
         PhotoView(image: viewModel.image)
             .onAppear {
-                self.viewModel.load()
+                if self.loadOnAppear {
+                    self.loadImage()
+                }
             }
+    }
+    
+    func loadImage() {
+        viewModel.load()
     }
 }
 
 struct DownloadPhotoView_Previews: PreviewProvider {
+    class MockedAdapter: ImageDownloadAdapter {
+        func getImage(at url: String) -> AnyPublisher<Image, Error> {
+            Future<Image, Error> { $0(.success(Image("forest"))) }
+                .eraseToAnyPublisher()
+        }
+    }
+    
     static var previews: some View {
         DownloadPhotoView(
-            viewModel: DownloadPhotoViewModel(url: "", fallbackImage: Image(systemName: "star"))
+            viewModel: DownloadPhotoViewModel(
+                url: "",
+                fallbackImage: Image(systemName: "star"),
+                adapter: MockedAdapter()
+            )
         )
+            .previewLayout(.fixed(width: 100, height: 100))
     }
 }

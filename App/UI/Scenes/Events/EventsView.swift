@@ -2,12 +2,13 @@ import SwiftUI
 
 struct EventsView: View {
     @ObservedObject var viewModel: EventsViewModel
+    @EnvironmentObject var appState: AppState
     
     init(viewModel: EventsViewModel = EventsViewModel()) {
         self.viewModel = viewModel
     }
     
-    var body: some View {
+    var body: some View {        
         VStack(alignment: .center) {
             viewModel.state.data.flatMap {
                 createEventList(events: $0)
@@ -25,6 +26,14 @@ struct EventsView: View {
         List {
             ForEach(events, id: \.id) { eventViewModel in
                 EventCardView(viewModel: eventViewModel)
+                    .onTapGesture { self.appState.isDetailPresenting.toggle() }
+                    .sheet(
+                        isPresented: self.$appState.isDetailPresenting,
+                        onDismiss: { self.appState.isDetailPresenting = false },
+                        content: {
+                            EventDetailView(viewModel: eventViewModel.eventDetailViewModel())
+                        }
+                    )
             }
         }
     }

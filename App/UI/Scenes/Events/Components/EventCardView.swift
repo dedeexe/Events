@@ -1,9 +1,7 @@
 import SwiftUI
 
 struct EventCardView: View {
-    
     let viewModel: EventCardViewModel
-    
     
     var body: some View {
         ZStack {

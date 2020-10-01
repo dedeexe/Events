@@ -10,7 +10,7 @@ public struct Event: Decodable, Identifiable {
     public var title: String
 }
 
-public struct Person: Decodable {
+public struct Person: Decodable, Identifiable {
     public var picture: String
     public var name: String
     public var eventId: String
