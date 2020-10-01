@@ -15,6 +15,6 @@ final class PersonViewModel {
     }
     
     func photoViewModel() -> DownloadPhotoViewModel {
-        DownloadPhotoViewModel(url: person.picture, fallbackImage: Image("forest"), adapter: adapter)
+        DownloadPhotoViewModel(url: person.picture, fallbackImage: Image.personPlaceholder, adapter: adapter)
     }
 }

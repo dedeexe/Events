@@ -15,6 +15,10 @@ struct EventsView: View {
                 createEventList(events: $0)
             }
             
+            viewModel.state.loading.flatMap {
+                createLoading(isAnimating: true)
+            }
+            
             viewModel.state.errorMessage.flatMap {
                 createErrorView(error: $0)
             }
@@ -47,6 +51,10 @@ struct EventsView: View {
     
     func createErrorView(error: String) -> some View {
         Text(error)
+    }
+    
+    func createLoading(isAnimating: Bool) -> some View {
+        LoadingView(isAnimating: isAnimating)
     }
 }
 

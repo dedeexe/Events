@@ -25,10 +25,11 @@ struct EventDetailView: View {
     
     var informationSection: some View {
         VStack(spacing: 16) {
-            Text(viewModel.event.description).font(.body)
+            Text(viewModel.event.description).font(.callout)
             TitleDescriptionRow(title: "Data", description: viewModel.event.date)
             TitleDescriptionRow(title: "Preço", description: viewModel.event.price)
         }
+        .padding([.top, .bottom], 16)
     }
     
     var locationSection: some View {
@@ -39,15 +40,19 @@ struct EventDetailView: View {
     
     var peopleSection: some View {
         VStack {
-            Text("Participantes")
-                .font(.headline)
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack {
-                    ForEach(viewModel.personViewModels(), id: \.id) { viewModel in
-                        PersonView(viewModel: viewModel)
-                            .frame(width: 120, height: 130)
+            if viewModel.hasParticipants {
+                Text("Participantes")
+                    .font(.headline)
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack {
+                        ForEach(viewModel.personViewModels(), id: \.id) { viewModel in
+                            PersonView(viewModel: viewModel)
+                                .frame(width: 120, height: 130)
+                        }
                     }
                 }
+            } else {
+                EmptyView()
             }
         }
         .listRowInsets(EdgeInsets())

@@ -2,12 +2,15 @@ import SwiftUI
 import Combine
 
 final class EventDetailViewModel {
-    let event: Event
     private let adapter: EventsAdapter
+    
+    let event: Event
+    let hasParticipants: Bool
     
     init(event: Event, adapter: EventsAdapter = EventsAdapterWorker()) {
         self.adapter = adapter
         self.event = event
+        self.hasParticipants = event.people.isEmpty == false
     }
     
     func eventDetailHeaderViewModel() -> EventDetailHeaderViewModel {

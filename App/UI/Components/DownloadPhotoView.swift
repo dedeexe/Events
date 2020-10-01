@@ -51,7 +51,7 @@ struct DownloadPhotoView: View {
 struct DownloadPhotoView_Previews: PreviewProvider {
     class MockedAdapter: ImageDownloadAdapter {
         func getImage(at url: String) -> AnyPublisher<Image, Error> {
-            Future<Image, Error> { $0(.success(Image("forest"))) }
+            Future<Image, Error> { $0(.success(Image.imagePlaceholder)) }
                 .eraseToAnyPublisher()
         }
     }
@@ -60,7 +60,7 @@ struct DownloadPhotoView_Previews: PreviewProvider {
         DownloadPhotoView(
             viewModel: DownloadPhotoViewModel(
                 url: "",
-                fallbackImage: Image(systemName: "star"),
+                fallbackImage: Image.imagePlaceholder,
                 adapter: MockedAdapter()
             )
         )

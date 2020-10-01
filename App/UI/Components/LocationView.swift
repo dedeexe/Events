@@ -18,7 +18,12 @@ struct LocationView: UIViewRepresentable {
         let coordinates = CLLocationCoordinate2D(latitude: viewModel.latitude, longitude: viewModel.longitude)
         let span = MKCoordinateSpan(latitudeDelta: 1.5, longitudeDelta: 1.5)
         let region = MKCoordinateRegion(center: coordinates, span: span)
+        
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = coordinates
+        
         uiView.setRegion(region, animated: false)
+        uiView.addAnnotation(annotation)
     }
 }
 

@@ -17,6 +17,6 @@ final class EventCardViewModel: Identifiable {
     }
     
     func photoViewModel() -> DownloadPhotoViewModel {
-        DownloadPhotoViewModel(url: event.image, fallbackImage: Image("forest"))
+        DownloadPhotoViewModel(url: event.image, fallbackImage: Image.imagePlaceholder)
     }
 }

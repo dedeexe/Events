@@ -19,7 +19,7 @@ struct PersonView: View {
 struct PersonView_Previews: PreviewProvider {
     class MockedAdapter: ImageDownloadAdapter {
         func getImage(at url: String) -> AnyPublisher<Image, Error> {
-            Future<Image, Error> { $0(.success(Image("forest"))) }
+            Future<Image, Error> { $0(.success(Image.personPlaceholder)) }
                 .eraseToAnyPublisher()
         }
     }

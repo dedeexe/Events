@@ -16,6 +16,6 @@ final class EventDetailHeaderViewModel {
     }
     
     func photoViewModel() -> DownloadPhotoViewModel {
-        DownloadPhotoViewModel(url: event.image, fallbackImage: Image("forest"))
+        DownloadPhotoViewModel(url: event.image, fallbackImage: Image.imagePlaceholder)
     }
 }

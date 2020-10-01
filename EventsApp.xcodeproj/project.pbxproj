@@ -23,6 +23,8 @@
 		0BC21E6D252617030048EDD7 /* EventDetailHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC21E6B252611510048EDD7 /* EventDetailHeaderViewModel.swift */; };
 		0BC21E6F2526315B0048EDD7 /* PersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC21E6E2526315B0048EDD7 /* PersonView.swift */; };
 		0BC21E71252631770048EDD7 /* PersonVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC21E70252631770048EDD7 /* PersonVIewModel.swift */; };
+		0BC21E7325269DDE0048EDD7 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC21E7225269DDE0048EDD7 /* LoadingView.swift */; };
+		0BC21E752526A2F40048EDD7 /* Image+placeholders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC21E742526A2F40048EDD7 /* Image+placeholders.swift */; };
 		0BED4FA525200A3900E2525D /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BED4FA425200A3900E2525D /* EventsView.swift */; };
 		0BED4FA72520241400E2525D /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BED4FA62520241400E2525D /* EventsViewModel.swift */; };
 		0BED4FAA252024F200E2525D /* DataState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BED4FA9252024F200E2525D /* DataState.swift */; };
@@ -54,6 +56,8 @@
 		0BC21E6B252611510048EDD7 /* EventDetailHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailHeaderViewModel.swift; sourceTree = "<group>"; };
 		0BC21E6E2526315B0048EDD7 /* PersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonView.swift; sourceTree = "<group>"; };
 		0BC21E70252631770048EDD7 /* PersonVIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonVIewModel.swift; sourceTree = "<group>"; };
+		0BC21E7225269DDE0048EDD7 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		0BC21E742526A2F40048EDD7 /* Image+placeholders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+placeholders.swift"; sourceTree = "<group>"; };
 		0BED4FA425200A3900E2525D /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
 		0BED4FA62520241400E2525D /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
 		0BED4FA9252024F200E2525D /* DataState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataState.swift; sourceTree = "<group>"; };
@@ -113,6 +117,7 @@
 			children = (
 				0B594D662522C52100694E60 /* Int+Date.swift */,
 				0B594D642522B5D300694E60 /* Double+Currency.swift */,
+				0BC21E742526A2F40048EDD7 /* Image+placeholders.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -133,6 +138,7 @@
 				0BC21E6725260FEB0048EDD7 /* TitleDescriptionRow.swift */,
 				0B95A727252417830080ACCF /* DownloadPhotoView.swift */,
 				0BC21E65252603F60048EDD7 /* LocationView.swift */,
+				0BC21E7225269DDE0048EDD7 /* LoadingView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -329,6 +335,7 @@
 				0B95A728252417830080ACCF /* DownloadPhotoView.swift in Sources */,
 				0B594D622522A83200694E60 /* EventCardView.swift in Sources */,
 				0B7F8269252570C700884182 /* EventDetailViewModel.swift in Sources */,
+				0BC21E752526A2F40048EDD7 /* Image+placeholders.swift in Sources */,
 				0BF133A1251FD87300842E8B /* SceneDelegate.swift in Sources */,
 				0B594D652522B5D300694E60 /* Double+Currency.swift in Sources */,
 				0BED4FB22520A8A600E2525D /* EventsAdapter.swift in Sources */,
@@ -336,6 +343,7 @@
 				0B7F826625256ED500884182 /* AppState.swift in Sources */,
 				0BC21E6C252617030048EDD7 /* EventDetailHeaderView.swift in Sources */,
 				0BED4FAA252024F200E2525D /* DataState.swift in Sources */,
+				0BC21E7325269DDE0048EDD7 /* LoadingView.swift in Sources */,
 				0B95A72325240CEF0080ACCF /* ImageDownloadAdapter.swift in Sources */,
 				0BF133A3251FD87300842E8B /* AppMainView.swift in Sources */,
 				0BC21E6F2526315B0048EDD7 /* PersonView.swift in Sources */,
