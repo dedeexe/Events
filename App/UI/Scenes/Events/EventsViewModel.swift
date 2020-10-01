@@ -5,6 +5,7 @@ final class EventsViewModel: ObservableObject, Identifiable {
     private(set) var id = UUID().uuidString
     private let adapter: EventsAdapter
     @Published var state: DataState<[EventCardViewModel]> = .idle
+    @Published var selectedDetailViewModel: EventDetailViewModel!
     
     var cancellables: Set<AnyCancellable> = []
     
@@ -25,5 +26,13 @@ final class EventsViewModel: ObservableObject, Identifiable {
             }
             .assign(to: \.state, on: self)
             .store(in: &cancellables)
+    }
+    
+    func selectDetailViewModel(from viewModel: EventCardViewModel) {
+        self.selectedDetailViewModel = viewModel.eventDetailViewModel()
+    }
+    
+    func freeDetailViewModel() {
+        self.selectedDetailViewModel = nil
     }
 }

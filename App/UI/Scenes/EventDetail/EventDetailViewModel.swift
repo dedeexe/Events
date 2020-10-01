@@ -1,10 +1,9 @@
 import SwiftUI
 import Combine
 
-final class EventDetailViewModel: ObservableObject, Identifiable {
+final class EventDetailViewModel {
     let event: Event
     private let adapter: EventsAdapter
-    var cancellables: Set<AnyCancellable> = []
     
     init(event: Event, adapter: EventsAdapter = EventsAdapterWorker()) {
         self.adapter = adapter
@@ -19,5 +18,9 @@ final class EventDetailViewModel: ObservableObject, Identifiable {
         event.people.map {
             PersonViewModel(person: $0)
         }
+    }
+    
+    func locationViewModel() -> LocationViewModel {
+        LocationViewModel(latitude: event.latitude, longitude: event.longitude)
     }
 }

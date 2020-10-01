@@ -3,6 +3,7 @@ import SwiftUI
 struct EventsView: View {
     @ObservedObject var viewModel: EventsViewModel
     @EnvironmentObject var appState: AppState
+    @State private var isDetailPresent: Bool = false
     
     init(viewModel: EventsViewModel = EventsViewModel()) {
         self.viewModel = viewModel
@@ -26,15 +27,21 @@ struct EventsView: View {
         List {
             ForEach(events, id: \.id) { eventViewModel in
                 EventCardView(viewModel: eventViewModel)
-                    .onTapGesture { self.appState.isDetailPresenting.toggle() }
-                    .sheet(
-                        isPresented: self.$appState.isDetailPresenting,
-                        onDismiss: { self.appState.isDetailPresenting = false },
-                        content: {
-                            EventDetailView(viewModel: eventViewModel.eventDetailViewModel())
-                        }
-                    )
+                    .onTapGesture {
+                        self.viewModel.selectDetailViewModel(from: eventViewModel)
+                        self.isDetailPresent.toggle()
+                    }
             }
+            .sheet(
+                isPresented: self.$isDetailPresent,
+                onDismiss: {
+                    self.isDetailPresent = false
+                    self.viewModel.freeDetailViewModel()
+                },
+                content: {
+                    EventDetailView(viewModel: self.viewModel.selectedDetailViewModel)
+                }
+            )
         }
     }
     

@@ -18,4 +18,3 @@ final class PersonViewModel {
         DownloadPhotoViewModel(url: person.picture, fallbackImage: Image("forest"), adapter: adapter)
     }
 }
-
