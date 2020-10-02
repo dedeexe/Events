@@ -29,6 +29,7 @@
 		0BC21E8A2526A95D0048EDD7 /* Double+CurrencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC21E892526A95D0048EDD7 /* Double+CurrencyTests.swift */; };
 		0BC21E8D2526AA9A0048EDD7 /* EventAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC21E8C2526AA9A0048EDD7 /* EventAdapterTests.swift */; };
 		0BC21E902526B0FF0048EDD7 /* Fixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC21E8F2526B0FE0048EDD7 /* Fixtures.swift */; };
+		0BC21E9A25273A510048EDD7 /* EventsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC21E9925273A510048EDD7 /* EventsViewModelTests.swift */; };
 		0BED4FA525200A3900E2525D /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BED4FA425200A3900E2525D /* EventsView.swift */; };
 		0BED4FA72520241400E2525D /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BED4FA62520241400E2525D /* EventsViewModel.swift */; };
 		0BED4FAA252024F200E2525D /* DataState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BED4FA9252024F200E2525D /* DataState.swift */; };
@@ -78,6 +79,7 @@
 		0BC21E892526A95D0048EDD7 /* Double+CurrencyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+CurrencyTests.swift"; sourceTree = "<group>"; };
 		0BC21E8C2526AA9A0048EDD7 /* EventAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAdapterTests.swift; sourceTree = "<group>"; };
 		0BC21E8F2526B0FE0048EDD7 /* Fixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fixtures.swift; sourceTree = "<group>"; };
+		0BC21E9925273A510048EDD7 /* EventsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModelTests.swift; sourceTree = "<group>"; };
 		0BED4FA425200A3900E2525D /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
 		0BED4FA62520241400E2525D /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
 		0BED4FA9252024F200E2525D /* DataState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataState.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 		0BC21E7B2526A59B0048EDD7 /* EventsAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				0BC21E9625273A060048EDD7 /* UI */,
 				0BC21E8E2526B0E60048EDD7 /* Tests_Helpers */,
 				0BC21E8B2526AA560048EDD7 /* Adapters */,
 				0BC21E842526A5A80048EDD7 /* Extensions */,
@@ -215,6 +218,30 @@
 				0BC21E8F2526B0FE0048EDD7 /* Fixtures.swift */,
 			);
 			path = Tests_Helpers;
+			sourceTree = "<group>";
+		};
+		0BC21E9625273A060048EDD7 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				0BC21E9725273A0B0048EDD7 /* Scenes */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		0BC21E9725273A0B0048EDD7 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				0BC21E9825273A1E0048EDD7 /* Events */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		0BC21E9825273A1E0048EDD7 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				0BC21E9925273A510048EDD7 /* EventsViewModelTests.swift */,
+			);
+			path = Events;
 			sourceTree = "<group>";
 		};
 		0BED4FA225200A1200E2525D /* Scenes */ = {
@@ -422,6 +449,7 @@
 				0BC21E8D2526AA9A0048EDD7 /* EventAdapterTests.swift in Sources */,
 				0BC21E882526A6F40048EDD7 /* Int+DateTests.swift in Sources */,
 				0BC21E902526B0FF0048EDD7 /* Fixtures.swift in Sources */,
+				0BC21E9A25273A510048EDD7 /* EventsViewModelTests.swift in Sources */,
 				0BC21E8A2526A95D0048EDD7 /* Double+CurrencyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
