@@ -25,7 +25,6 @@
 		0BC21E71252631770048EDD7 /* PersonVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC21E70252631770048EDD7 /* PersonVIewModel.swift */; };
 		0BC21E7325269DDE0048EDD7 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC21E7225269DDE0048EDD7 /* LoadingView.swift */; };
 		0BC21E752526A2F40048EDD7 /* Image+placeholders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC21E742526A2F40048EDD7 /* Image+placeholders.swift */; };
-		0BC21E7D2526A59B0048EDD7 /* EventsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC21E7C2526A59B0048EDD7 /* EventsAppTests.swift */; };
 		0BC21E882526A6F40048EDD7 /* Int+DateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC21E872526A6F40048EDD7 /* Int+DateTests.swift */; };
 		0BC21E8A2526A95D0048EDD7 /* Double+CurrencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC21E892526A95D0048EDD7 /* Double+CurrencyTests.swift */; };
 		0BC21E8D2526AA9A0048EDD7 /* EventAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC21E8C2526AA9A0048EDD7 /* EventAdapterTests.swift */; };
@@ -74,7 +73,6 @@
 		0BC21E7225269DDE0048EDD7 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		0BC21E742526A2F40048EDD7 /* Image+placeholders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+placeholders.swift"; sourceTree = "<group>"; };
 		0BC21E7A2526A59B0048EDD7 /* EventsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventsAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0BC21E7C2526A59B0048EDD7 /* EventsAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsAppTests.swift; sourceTree = "<group>"; };
 		0BC21E7E2526A59B0048EDD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0BC21E872526A6F40048EDD7 /* Int+DateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+DateTests.swift"; sourceTree = "<group>"; };
 		0BC21E892526A95D0048EDD7 /* Double+CurrencyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+CurrencyTests.swift"; sourceTree = "<group>"; };
@@ -189,7 +187,6 @@
 				0BC21E8E2526B0E60048EDD7 /* Tests_Helpers */,
 				0BC21E8B2526AA560048EDD7 /* Adapters */,
 				0BC21E842526A5A80048EDD7 /* Extensions */,
-				0BC21E7C2526A59B0048EDD7 /* EventsAppTests.swift */,
 				0BC21E7E2526A59B0048EDD7 /* Info.plist */,
 			);
 			path = EventsAppTests;
@@ -423,7 +420,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BC21E8D2526AA9A0048EDD7 /* EventAdapterTests.swift in Sources */,
-				0BC21E7D2526A59B0048EDD7 /* EventsAppTests.swift in Sources */,
 				0BC21E882526A6F40048EDD7 /* Int+DateTests.swift in Sources */,
 				0BC21E902526B0FF0048EDD7 /* Fixtures.swift in Sources */,
 				0BC21E8A2526A95D0048EDD7 /* Double+CurrencyTests.swift in Sources */,

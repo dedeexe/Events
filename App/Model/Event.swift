@@ -1,4 +1,4 @@
-public struct Event: Decodable, Identifiable {
+public struct Event: Decodable, Identifiable, Equatable {
     public var id: String
     public var people: [Person]
     public var date: String
@@ -10,7 +10,7 @@ public struct Event: Decodable, Identifiable {
     public var title: String
 }
 
-public struct Person: Decodable, Identifiable {
+public struct Person: Decodable, Identifiable, Equatable {
     public var picture: String
     public var name: String
     public var eventId: String
