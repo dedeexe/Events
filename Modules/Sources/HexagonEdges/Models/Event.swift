@@ -11,50 +11,6 @@ extension InputModel {
         public var latitude: Double?
         public var price: Double?
         public var title: String?
-
-        //============================================
-        //Paliative situation until endpoint is fixed
-        //TODO: Remove it once it been fixed
-        enum CodingKeys: String, CodingKey{
-            case id
-            case people
-            case date
-            case description
-            case image
-            case longitude
-            case latitude
-            case price
-            case title
-        }
-        
-        public init(from decoder: Decoder) {
-            let container = try? decoder.container(keyedBy: CodingKeys.self)
-            
-            self.id = try? container?.decodeIfPresent(String.self, forKey: .id)
-            self.people = try? container?.decodeIfPresent([Person].self, forKey: .people)
-            self.date = try? container?.decodeIfPresent(Int.self, forKey: .date)
-            self.description = try? container?.decodeIfPresent(String.self, forKey: .description)
-            self.image = try? container?.decodeIfPresent(String.self, forKey: .image)
-            self.price = try? container?.decodeIfPresent(Double.self, forKey: .price)
-            self.title = try? container?.decodeIfPresent(String.self, forKey: .title)
-            
-            if let value = try? container?.decodeIfPresent(String.self, forKey: .longitude) {
-                self.longitude = Double(value)
-            }
-            
-            if let value = try? container?.decodeIfPresent(Double.self, forKey: .longitude) {
-                self.longitude = value
-            }
-            
-            if let value = try? container?.decodeIfPresent(String.self, forKey: .latitude) {
-                self.latitude = Double(value)
-            }
-            
-            if let value = try? container?.decodeIfPresent(Double.self, forKey: .latitude) {
-                self.latitude = value
-            }
-        }
-        //============================================
     }
 }
 
