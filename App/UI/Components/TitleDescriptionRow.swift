@@ -1,11 +1,3 @@
-//
-//  TitleDescriptionRow.swift
-//  EventsApp
-//
-//  Created by User on 10/1/20.
-//  Copyright © 2020 User. All rights reserved.
-//
-
 import SwiftUI
 
 struct TitleDescriptionRow: View {

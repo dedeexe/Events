@@ -5,7 +5,6 @@ import HexagonArchtecture
 
 protocol EventsAdapter: AnyObject {
     func allEvents() -> AnyPublisher<[Event], Error>
-    func events(by id: String)
 }
 
 final class EventsAdapterWorker: EventsAdapter, ObservableObject {
@@ -32,10 +31,6 @@ final class EventsAdapterWorker: EventsAdapter, ObservableObject {
         }
         
         return future.eraseToAnyPublisher()
-    }
-    
-    func events(by id: String) {
-        
     }
 }
 

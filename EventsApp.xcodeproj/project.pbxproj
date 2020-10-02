@@ -25,6 +25,10 @@
 		0BC21E71252631770048EDD7 /* PersonVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC21E70252631770048EDD7 /* PersonVIewModel.swift */; };
 		0BC21E7325269DDE0048EDD7 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC21E7225269DDE0048EDD7 /* LoadingView.swift */; };
 		0BC21E752526A2F40048EDD7 /* Image+placeholders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC21E742526A2F40048EDD7 /* Image+placeholders.swift */; };
+		0BC21E7D2526A59B0048EDD7 /* EventsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC21E7C2526A59B0048EDD7 /* EventsAppTests.swift */; };
+		0BC21E882526A6F40048EDD7 /* Int+DateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC21E872526A6F40048EDD7 /* Int+DateTests.swift */; };
+		0BC21E8A2526A95D0048EDD7 /* Double+CurrencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC21E892526A95D0048EDD7 /* Double+CurrencyTests.swift */; };
+		0BC21E8D2526AA9A0048EDD7 /* EventAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC21E8C2526AA9A0048EDD7 /* EventAdapterTests.swift */; };
 		0BED4FA525200A3900E2525D /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BED4FA425200A3900E2525D /* EventsView.swift */; };
 		0BED4FA72520241400E2525D /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BED4FA62520241400E2525D /* EventsViewModel.swift */; };
 		0BED4FAA252024F200E2525D /* DataState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BED4FA9252024F200E2525D /* DataState.swift */; };
@@ -38,6 +42,16 @@
 		0BF133A8251FD87700842E8B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BF133A7251FD87700842E8B /* Preview Assets.xcassets */; };
 		0BF133AB251FD87700842E8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BF133A9251FD87700842E8B /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0BC21E7F2526A59B0048EDD7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0BF13393251FD87300842E8B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0BF1339A251FD87300842E8B;
+			remoteInfo = EventsApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0B150A96252551A900983495 /* EventDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewModel.swift; sourceTree = "<group>"; };
@@ -58,6 +72,12 @@
 		0BC21E70252631770048EDD7 /* PersonVIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonVIewModel.swift; sourceTree = "<group>"; };
 		0BC21E7225269DDE0048EDD7 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		0BC21E742526A2F40048EDD7 /* Image+placeholders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+placeholders.swift"; sourceTree = "<group>"; };
+		0BC21E7A2526A59B0048EDD7 /* EventsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventsAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BC21E7C2526A59B0048EDD7 /* EventsAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsAppTests.swift; sourceTree = "<group>"; };
+		0BC21E7E2526A59B0048EDD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BC21E872526A6F40048EDD7 /* Int+DateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+DateTests.swift"; sourceTree = "<group>"; };
+		0BC21E892526A95D0048EDD7 /* Double+CurrencyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+CurrencyTests.swift"; sourceTree = "<group>"; };
+		0BC21E8C2526AA9A0048EDD7 /* EventAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAdapterTests.swift; sourceTree = "<group>"; };
 		0BED4FA425200A3900E2525D /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
 		0BED4FA62520241400E2525D /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
 		0BED4FA9252024F200E2525D /* DataState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataState.swift; sourceTree = "<group>"; };
@@ -74,6 +94,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0BC21E772526A59B0048EDD7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0BF13398251FD87300842E8B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -154,6 +181,34 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		0BC21E7B2526A59B0048EDD7 /* EventsAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				0BC21E8B2526AA560048EDD7 /* Adapters */,
+				0BC21E842526A5A80048EDD7 /* Extensions */,
+				0BC21E7C2526A59B0048EDD7 /* EventsAppTests.swift */,
+				0BC21E7E2526A59B0048EDD7 /* Info.plist */,
+			);
+			path = EventsAppTests;
+			sourceTree = "<group>";
+		};
+		0BC21E842526A5A80048EDD7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0BC21E872526A6F40048EDD7 /* Int+DateTests.swift */,
+				0BC21E892526A95D0048EDD7 /* Double+CurrencyTests.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0BC21E8B2526AA560048EDD7 /* Adapters */ = {
+			isa = PBXGroup;
+			children = (
+				0BC21E8C2526AA9A0048EDD7 /* EventAdapterTests.swift */,
+			);
+			path = Adapters;
+			sourceTree = "<group>";
+		};
 		0BED4FA225200A1200E2525D /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				0BF1339D251FD87300842E8B /* App */,
+				0BC21E7B2526A59B0048EDD7 /* EventsAppTests */,
 				0BF1339C251FD87300842E8B /* Products */,
 				0BED4FAB25202C5600E2525D /* Frameworks */,
 			);
@@ -220,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				0BF1339B251FD87300842E8B /* EventsApp.app */,
+				0BC21E7A2526A59B0048EDD7 /* EventsAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -253,6 +310,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0BC21E792526A59B0048EDD7 /* EventsAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0BC21E812526A59B0048EDD7 /* Build configuration list for PBXNativeTarget "EventsAppTests" */;
+			buildPhases = (
+				0BC21E762526A59B0048EDD7 /* Sources */,
+				0BC21E772526A59B0048EDD7 /* Frameworks */,
+				0BC21E782526A59B0048EDD7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0BC21E802526A59B0048EDD7 /* PBXTargetDependency */,
+			);
+			name = EventsAppTests;
+			productName = EventsAppTests;
+			productReference = 0BC21E7A2526A59B0048EDD7 /* EventsAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		0BF1339A251FD87300842E8B /* EventsApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0BF133AF251FD87700842E8B /* Build configuration list for PBXNativeTarget "EventsApp" */;
@@ -283,6 +358,10 @@
 				LastUpgradeCheck = 1170;
 				ORGANIZATIONNAME = User;
 				TargetAttributes = {
+					0BC21E792526A59B0048EDD7 = {
+						CreatedOnToolsVersion = 11.7;
+						TestTargetID = 0BF1339A251FD87300842E8B;
+					};
 					0BF1339A251FD87300842E8B = {
 						CreatedOnToolsVersion = 11.7;
 					};
@@ -302,11 +381,19 @@
 			projectRoot = "";
 			targets = (
 				0BF1339A251FD87300842E8B /* EventsApp */,
+				0BC21E792526A59B0048EDD7 /* EventsAppTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0BC21E782526A59B0048EDD7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0BF13399251FD87300842E8B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -320,6 +407,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0BC21E762526A59B0048EDD7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BC21E8D2526AA9A0048EDD7 /* EventAdapterTests.swift in Sources */,
+				0BC21E7D2526A59B0048EDD7 /* EventsAppTests.swift in Sources */,
+				0BC21E882526A6F40048EDD7 /* Int+DateTests.swift in Sources */,
+				0BC21E8A2526A95D0048EDD7 /* Double+CurrencyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0BF13397251FD87300842E8B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -355,6 +453,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		0BC21E802526A59B0048EDD7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0BF1339A251FD87300842E8B /* EventsApp */;
+			targetProxy = 0BC21E7F2526A59B0048EDD7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		0BF133A9251FD87700842E8B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -367,6 +473,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0BC21E822526A59B0048EDD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EventsAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = exe.dede.EventsAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EventsApp.app/EventsApp";
+			};
+			name = Debug;
+		};
+		0BC21E832526A59B0048EDD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EventsAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = exe.dede.EventsAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EventsApp.app/EventsApp";
+			};
+			name = Release;
+		};
 		0BF133AD251FD87700842E8B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -522,6 +666,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0BC21E812526A59B0048EDD7 /* Build configuration list for PBXNativeTarget "EventsAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0BC21E822526A59B0048EDD7 /* Debug */,
+				0BC21E832526A59B0048EDD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		0BF13396251FD87300842E8B /* Build configuration list for PBXProject "EventsApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
